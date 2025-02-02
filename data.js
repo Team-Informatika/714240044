@@ -13,6 +13,15 @@ function renderDataDariJson() {
 }
 
 function responseFunction(data) {
-    setInner("konten", file.data.Name);
+    console.log('Response Data', data.data);
+
+    const isiData = `
+        <h1>${data.Name}</h1>
+        <p>${data.Ug}</p>
+        <p>${data.Skill}</p>
+        <p>${data.Rate}</p>
+    `;
+
+    setInner("data", isiData);
 
 }
