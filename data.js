@@ -6,8 +6,6 @@ renderHTML('data', "data.html", renderDataDariJson);
 function renderDataDariJson() {
     getJSON(
         "https://t.if.co.id/json/rifa.json",
-        "aja",
-        "apa",
         responseFunction
     );
 }
@@ -16,16 +14,12 @@ function responseFunction(data) {
     console.log('Response Data', data);
 
     const isiData = `
-        <div class="card">
             <img src="${data.Foto}" alt="Profile Picture" class="profile-pic">
             <h1>${data.Name}</h1>
-            <p><strong>Username:</strong> ${data.Ug}</p>
-            <p><strong>Skill:</strong> ${data.Skill}</p>
-            <p><strong>Rate:</strong> ${data.Rate}</p>
-        </div>
+            <p><strong></strong> ${data.Ug}</p>
+            <p><strong></strong> ${data.Skill}</p>
+            <p><strong></strong> ${data.Rate}</p>
     `;
 
     setInner("konten", isiData);
 }
-
-renderDataDariJson();
