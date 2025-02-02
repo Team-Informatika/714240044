@@ -10,16 +10,9 @@ function renderDataDariJson() {
     );
 }
 
-function responseFunction(data) {
-    console.log('Response Data', data);
+function responseFunction(isi) {
+    console.log(isi);
 
-    const isiData = `
-            <img src="${data.Foto}" alt="Profile Picture" class="profile-pic">
-            <h1>${data.Name}</h1>
-            <p><strong></strong> ${data.Ug}</p>
-            <p><strong></strong> ${data.Skill}</p>
-            <p><strong></strong> ${data.Rate}</p>
-    `;
 
-    setInner("konten", isiData);
+    setInner("konten", isi.data.Name);
 }
