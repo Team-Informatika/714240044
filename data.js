@@ -15,6 +15,7 @@ function renderDataDariJson() {
 function responseFunction(data) {
     console.log('Response Data', data.data);
 
+    const data = data.data;
     const isiData = `
         <h1>${data.Name}</h1>
         <p>${data.Ug}</p>
