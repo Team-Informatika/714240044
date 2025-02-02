@@ -22,6 +22,6 @@ function responseFunction(data) {
         <p>${data.Rate}</p>
     `;
 
-    setInner("data", isiData);
+    setInner("konten", isiData);
 
 }
