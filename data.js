@@ -13,15 +13,19 @@ function renderDataDariJson() {
 }
 
 function responseFunction(data) {
-    console.log('Response Data', data.data);
+    console.log('Response Data', data);
 
     const isiData = `
-        <h1>${data.Name}</h1>
-        <p>${data.Ug}</p>
-        <p>${data.Skill}</p>
-        <p>${data.Rate}</p>
+        <div class="card">
+            <img src="${data.Foto}" alt="Profile Picture" class="profile-pic">
+            <h1>${data.Name}</h1>
+            <p><strong>Username:</strong> ${data.Ug}</p>
+            <p><strong>Skill:</strong> ${data.Skill}</p>
+            <p><strong>Rate:</strong> ${data.Rate}</p>
+        </div>
     `;
 
     setInner("konten", isiData);
-
 }
+
+renderDataDariJson();
