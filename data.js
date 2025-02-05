@@ -15,4 +15,7 @@ function responseFunction(isi) {
 
 
     setInner("konten", isi.data.Name);
+    setInner("konten", isi.data.Ug);
+    setInner("konten", isi.data.Skill);
+    setInner("konten", isi.data.Rate);
 }
