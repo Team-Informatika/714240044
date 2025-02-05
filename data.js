@@ -14,8 +14,5 @@ function responseFunction(isi) {
     console.log(isi);
 
 
-    setInner("konten", isi.data.Name);
-    setInner("konten", isi.data.Ug);
-    setInner("konten", isi.data.Skill);
-    setInner("konten", isi.data.Rate);
+    setInner("konten", isi.data.Foto.Name.Ug.Skill.Rate);
 }
