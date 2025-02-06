@@ -13,7 +13,7 @@ function renderDataDariJson() {
 function responseFunction(isi) {
     console.log(isi);
     const avatarSrc = isi.data.Foto;
-    const avatarHTML = <img src="${FotoSrc}" alt="Avatar"/>;
+    const avatarHTML = `<img src="${avatarSrc}" alt="Avatar">`;
         setInner('avatar', avatarHTML);
 
 
