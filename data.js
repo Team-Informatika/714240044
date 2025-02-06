@@ -35,13 +35,26 @@ function responseFunction(isi) {
     rate.id = "rate";
     rate.textContent = isi.data.Rate;
 
+    const socialContainer = document.createElement("div");
+    socialContainer.classList.add("social-icons");
+    
+    isi.social_icons.forEach(social => {
+        const link = document.createElement("a");
+        link.href = social.url;
+        link.target = "_blank";
+        link.innerHTML = `<i class='${social.icon}'></i>`;
+        link.style.margin = "5px";
+        socialContainer.appendChild(link);
+    });
+
     // Tambahkan elemen ke dalam card-item
     cardItem.appendChild(avatar);
     cardItem.appendChild(name);
     cardItem.appendChild(ug);
     cardItem.appendChild(skill);
     cardItem.appendChild(rate);
-
+    cardItem.appendChild(socialContainer);
+    
     // Tambahkan card-item ke dalam card utama
     dataContainer.appendChild(cardItem);
 }
