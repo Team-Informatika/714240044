@@ -12,10 +12,13 @@ function renderDataDariJson() {
 
 function responseFunction(isi) {
     console.log(isi);
+    const avatarSrc = isi.data.Foto;
+    const avatarHTML = <img src="${FotoSrc}" alt="Avatar">;
+        setInner('avatar', avatarHTML);
 
 
-    setInner("konten", isi.data.Name);
-    setInner("ug", isi.data.Ug);
-    setInner("skill", isi.data.Skill);
-    setInner("rate", isi.data.Rate);
+        setInner("konten", isi.data.Name);
+        setInner("ug", isi.data.Ug);
+        setInner("skill", isi.data.Skill);
+        setInner("rate", isi.data.Rate);
 }
