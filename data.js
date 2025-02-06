@@ -10,11 +10,19 @@ function renderDataDariJson() {
 function errorFunction(error) {
     console.error("Error fetching data:", error);
     const dataContainer = document.getElementById("data");
-    dataContainer.innerHTML = "<p style='color: red;'>Gagal mengambil data.</p>";
+    if (dataContainer) {
+        dataContainer.innerHTML = "<p style='color: red;'>Gagal mengambil data.</p>";
+    }
 }
 
 function responseFunction(isi) {
-    console.log(isi);
+    console.log("Data JSON yang diterima:", isi); // Debugging
+
+    const data = isi.data; // Pastikan mengakses `data` dalam JSON
+    if (!data) {
+        console.error("Data tidak ditemukan dalam JSON");
+        return;
+    }
 
     const dataContainer = document.getElementById("data");
     if (!dataContainer) {
@@ -27,52 +35,49 @@ function responseFunction(isi) {
     cardItem.classList.add("card-item");
 
     const avatar = document.createElement("img");
-    avatar.src = isi.Foto;
+    avatar.src = data.Foto || "https://via.placeholder.com/100";
     avatar.alt = "Avatar";
     avatar.classList.add("profile-pic");
-    avatar.onerror = function() {
-        avatar.src = "https://via.placeholder.com/100"; // Placeholder jika gagal
+    avatar.onerror = function () {
+        avatar.src = "https://via.placeholder.com/100";
     };
 
     const name = document.createElement("h3");
-    name.id = "konten";
-    name.textContent = isi.Name;
+    name.textContent = data.Name || "Nama Tidak Tersedia";
 
-    const ug = document.createElement("h3");
-    ug.id = "ug";
-    ug.textContent = isi.Ug;
+    const ug = document.createElement("p");
+    ug.textContent = data.Ug || "Username Tidak Tersedia";
 
-    const skill = document.createElement("h3");
-    skill.id = "skill";
-    skill.textContent = isi.Skill;
+    const skill = document.createElement("p");
+    skill.textContent = data.Skill || "Skill Tidak Tersedia";
 
-    const rate = document.createElement("h3");
-    rate.id = "rate";
-    rate.textContent = isi.Rate;
+    const rate = document.createElement("p");
+    rate.textContent = data.Rate || "Rate Tidak Tersedia";
 
     const socialContainer = document.createElement("div");
     socialContainer.classList.add("social-icons");
-    
-    isi.social_icons.forEach(social => {
-        const link = document.createElement("a");
-        link.href = social.url;
-        link.target = "_blank";
-        link.innerHTML = `<i class='${social.icon}'></i>`;
-        link.style.margin = "5px";
-        socialContainer.appendChild(link);
-    });
 
-    // Tambahkan elemen ke dalam card-item
+    if (Array.isArray(data.social_icons)) {
+        data.social_icons.forEach(social => {
+            const link = document.createElement("a");
+            link.href = social.url;
+            link.target = "_blank";
+            link.innerHTML = `<i class='${social.icon}'></i>`;
+            link.style.margin = "5px";
+            socialContainer.appendChild(link);
+        });
+    } else {
+        socialContainer.innerHTML = "<p>Tidak ada media sosial.</p>";
+    }
+
     cardItem.appendChild(avatar);
     cardItem.appendChild(name);
     cardItem.appendChild(ug);
     cardItem.appendChild(skill);
     cardItem.appendChild(rate);
     cardItem.appendChild(socialContainer);
-    
-    // Tambahkan card-item ke dalam card utama
+
     dataContainer.appendChild(cardItem);
 }
 
-// Panggil fungsi untuk merender data
 renderDataDariJson();
