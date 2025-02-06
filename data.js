@@ -23,15 +23,15 @@ function responseFunction(isi) {
     name.id = "konten";
     name.textContent = isi.data.Name;
 
-    const ug = document.createElement("h3");
+    const ug = document.createElement("p");
     ug.id = "ug";
     ug.textContent = isi.data.Ug;
 
-    const skill = document.createElement("h3");
+    const skill = document.createElement("p");
     skill.id = "skill";
     skill.textContent = isi.data.Skill;
 
-    const rate = document.createElement("h3");
+    const rate = document.createElement("p");
     rate.id = "rate";
     rate.textContent = isi.data.Rate;
 
