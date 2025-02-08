@@ -34,6 +34,20 @@ function responseFunction(isi) {
     rate.id = "rate";
     rate.textContent = isi.data.Rate;
 
+    const socialContainer = document.createElement("div");
+    socialContainer.classList.add("social-icons");
+    socialContainer.id = "so";
+
+    isi.data.socialIcons.icons.forEach((icon) => {
+        const iconElement = document.createElement("i");
+        iconElement.id = icon.id;
+        iconElement.className = icon.class;
+        iconElement.title = icon.type;
+        socialContainer.appendChild(iconElement);
+    });
+
+    dataContainer.appendChild(socialContainer);
+
     // Tambahkan elemen ke dalam card-item
     dataContainer.appendChild(avatar);
     dataContainer.appendChild(name);
@@ -41,3 +55,12 @@ function responseFunction(isi) {
     dataContainer.appendChild(skill);
     dataContainer.appendChild(rate);
 }
+
+const colors = ['#2f2f3f', '#464685', '#1c1c8f', '#0d0d67', '#010143'];
+        let currentColorIndex = 0;
+
+        // Ubah warna latar belakang setiap 2 detik
+        setInterval(function() {
+            document.body.style.backgroundColor = colors[currentColorIndex];
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+        }, 2000);
