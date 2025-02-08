@@ -1,5 +1,7 @@
 import { getJSON } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.1/api.js";
-import { renderHTML, setInner } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.1/element.js";
+import { renderHTML } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.1/element.js";
+
+renderHTML("container", "data.html", renderDataDariJson);
 
 function renderDataDariJson() {
     getJSON("https://t.if.co.id/json/rifa.json", responseFunction);
@@ -12,7 +14,7 @@ function responseFunction(isi) {
     dataContainer.innerHTML = ""; // Hapus isi lama sebelum menambahkan data baru
 
     const cardItem = document.createElement("div");
-    cardItem.classList.add("card-item");
+    cardItem.classList.add("card");
 
     const avatar = document.createElement("img");
     avatar.src = isi.data.Foto;
@@ -45,6 +47,3 @@ function responseFunction(isi) {
     // Tambahkan card-item ke dalam card utama
     dataContainer.appendChild(cardItem);
 }
-
-// Panggil fungsi untuk merender data
-renderDataDariJson();
