@@ -18,11 +18,18 @@ body {
     position: relative;
     background: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 255, 213, 0.836);
     padding: 20px;
     width: 400px;
     text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+
+.card:hover {
+    box-shadow: 0 10px 0 rgba(0, 225, 255, 0.836);
+    transform: translateY(-5px);
+}
+
 .card img#avatar {
     width: 200px;
     height: 200px;
