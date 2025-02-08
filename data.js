@@ -39,6 +39,11 @@ function responseFunction(isi) {
     socialContainer.id = "so";
 
     isi.data.socialIcons.icons.forEach((icon) => {
+        const linkElement = document.createElement("a");
+        linkElement.href = icon.url;
+        linkElement.target = "_blank";
+        linkElement.rel = "noopener noreferrer";
+
         const iconElement = document.createElement("i");
         iconElement.id = icon.id;
         iconElement.className = icon.class;
@@ -46,7 +51,7 @@ function responseFunction(isi) {
         socialContainer.appendChild(iconElement);
     });
 
-    dataContainer.appendChild(socialContainer);
+    
 
     // Tambahkan elemen ke dalam card-item
     dataContainer.appendChild(avatar);
@@ -54,6 +59,9 @@ function responseFunction(isi) {
     dataContainer.appendChild(ug);
     dataContainer.appendChild(skill);
     dataContainer.appendChild(rate);
+    linkElement.appendChild(iconElement);
+    socialContainer.appendChild(linkElement);
+    dataContainer.appendChild(socialContainer);
 }
 
 const colors = ['#2f2f3f', '#464685', '#1c1c8f', '#0d0d67', '#010143'];
