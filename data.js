@@ -15,6 +15,7 @@ function responseFunction(isi) {
 
     const cardItem = document.createElement("div");
     cardItem.classList.add("card");
+    
 
     const avatar = document.createElement("img");
     avatar.src = isi.data.Foto;
@@ -40,7 +41,7 @@ function responseFunction(isi) {
     // Tambahkan elemen ke dalam card-item
     cardItem.appendChild(avatar);
     cardItem.appendChild(name);
-    cardItem.appendChild(ug);
+    ug.appendChild()
     cardItem.appendChild(skill);
     cardItem.appendChild(rate);
 
