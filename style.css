@@ -41,3 +41,32 @@ body {
     color: #28a745;
     margin-top: 10px;
 }
+
+/* sosial icon */
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.social-icons i {
+    font-size: 25px;
+    color: #5555;
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.social-icons #instagram:hover {
+    color: #e4405f; /* Warna merah muda untuk Instagram */
+}
+
+.social-icons #github:hover {
+    color: #333; /* Warna hitam untuk GitHub */
+}
+
+.social-icons #wa:hover {
+    color: #25d366; /* Warna hijau untuk WhatsApp */
+}
