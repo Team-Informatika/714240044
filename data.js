@@ -13,9 +13,6 @@ function responseFunction(isi) {
     const dataContainer = document.getElementById("data");
     dataContainer.innerHTML = ""; // Hapus isi lama sebelum menambahkan data baru
 
-    const cardItem = document.createElement("div");
-    cardItem.classList.add("card");
-
     const avatar = document.createElement("img");
     avatar.src = isi.data.Foto;
     avatar.alt = "Avatar";
@@ -38,12 +35,9 @@ function responseFunction(isi) {
     rate.textContent = isi.data.Rate;
 
     // Tambahkan elemen ke dalam card-item
-    cardItem.appendChild(avatar);
-    cardItem.appendChild(name);
-    cardItem.appendChild(ug);
-    cardItem.appendChild(skill);
-    cardItem.appendChild(rate);
-
-    // Tambahkan card-item ke dalam card utama
-    dataContainer.appendChild(cardItem);
+    dataContainer.appendChild(avatar);
+    dataContainer.appendChild(name);
+    dataContainer.appendChild(ug);
+    dataContainer.appendChild(skill);
+    dataContainer.appendChild(rate);
 }
