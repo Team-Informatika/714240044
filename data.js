@@ -48,7 +48,9 @@ function responseFunction(isi) {
         iconElement.id = icon.id;
         iconElement.className = icon.class;
         iconElement.title = icon.type;
-        socialContainer.appendChild(iconElement);
+
+        linkElement.appendChild(iconElement);
+        socialContainer.appendChild(linkElement);
     });
 
     
@@ -59,8 +61,6 @@ function responseFunction(isi) {
     dataContainer.appendChild(ug);
     dataContainer.appendChild(skill);
     dataContainer.appendChild(rate);
-    linkElement.appendChild(iconElement);
-    socialContainer.appendChild(linkElement);
     dataContainer.appendChild(socialContainer);
 }
 
