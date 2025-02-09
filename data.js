@@ -7,7 +7,7 @@ function ada() {
     console.log(getHash());
     const hashpath = getHash();
     if (hashpath === "data") {
-        console.log("ini sudah muncul datanya");
+        console.log("ini gan, sudah muncul datanya😊");
         renderHTML("container", "data.html", renderDataDariJson);
     }
 }
