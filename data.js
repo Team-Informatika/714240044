@@ -73,11 +73,17 @@ function responseFunction(isi) {
     dataContainer.appendChild(socialContainer);
 }
 
-const colors = ['#2f2f3f', '#464685', '#1c1c8f', '#0d0d67', '#010143'];
-        let currentColorIndex = 0;
+const gradients = [
+    'linear-gradient(to right, rgb(47, 47, 63), rgb(70, 70, 133))',
+    'linear-gradient(to right, rgb(70, 70, 133), rgb(28, 28, 143))',
+    'linear-gradient(to right, rgb(28, 28, 143), rgb(13, 13, 103))',
+    'linear-gradient(to right, rgb(13, 13, 103), rgb(1, 1, 67))',
+    'linear-gradient(to right, rgb(1, 1, 67), rgb(47, 47, 63))'
+];
 
-        // Ubah warna latar belakang setiap 2 detik
-        setInterval(function() {
-            document.body.style.backgroundColor = colors[currentColorIndex];
-            currentColorIndex = (currentColorIndex + 1) % colors.length;
-        }, 2000);
+let currentGradientIndex = 0;
+
+setInterval(function() {
+    document.body.style.background = gradients[currentGradientIndex];
+    currentGradientIndex = (currentGradientIndex + 1) % gradients.length;
+}, 2000);
