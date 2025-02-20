@@ -74,11 +74,11 @@ function responseFunction(isi) {
 }
 
 const gradients = [
-    'linear-gradient(to right, rgb(47, 47, 63), rgb(70, 70, 133))',
-    'linear-gradient(to right, rgb(70, 70, 133), rgb(28, 28, 143))',
-    'linear-gradient(to right, rgb(28, 28, 143), rgb(13, 13, 103))',
-    'linear-gradient(to right, rgb(13, 13, 103), rgb(1, 1, 67))',
-    'linear-gradient(to right, rgb(1, 1, 67), rgb(47, 47, 63))'
+    'linear-gradient(to right,rgba(2,0,36,1) 0%, rgba(85,85,181,1) 35%, rgba(0,212,255,1) 100%)',
+    'linear-gradient(to right, rgba(2,0,36,1) 0%, rgba(57,57,224,1) 35%, rgba(0,212,255,1) 100%)',
+    'linear-gradient(to right, rgba(2,0,36,1) 0%, rgba(12,82,177,1) 35%, rgba(0,212,255,1) 100%)',
+    'linear-gradient(to right, rgba(2,0,36,1) 0%, rgba(12,121,177,1) 35%, rgba(0,212,255,1) 100%)',
+    'linear-gradient(to right, rgba(2,0,36,1) 0%, rgba(12,177,128,1) 35%, rgba(0,212,255,1) 100%)'
 ];
 
 let currentGradientIndex = 0;
