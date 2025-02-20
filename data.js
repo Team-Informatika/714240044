@@ -85,7 +85,5 @@ let currentGradientIndex = 0;
 
 setInterval(function() {
     document.body.style.background = gradients[currentGradientIndex];
-    document.body.style.backgroundSize = "400% 400%";
-    document.body.style.animation = "gradientShift 10s infinite linear";
     currentGradientIndex = (currentGradientIndex + 1) % gradients.length;
-}, 5000);
+}, 2000);
