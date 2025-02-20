@@ -4,7 +4,7 @@ import { getHash, onHashChange } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0
 
 onHashChange(ada);
 function ada() {
-    console.log(getHash());
+    console.log(hashpath);
     const hashpath = getHash();
     if (hashpath === "data") {
         console.log("ini sudah muncul datanya");
