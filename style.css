@@ -19,7 +19,7 @@ body {
     position: relative;
     background: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 255, 213, 0.836);
+    box-shadow: 0 4px 6px rgb(2, 15, 13);
     padding: 20px;
     width: 400px;
     text-align: center;
@@ -27,7 +27,7 @@ body {
 }
 
 .card:hover {
-    box-shadow: 0 10px 0 rgba(0, 225, 255, 0.836);
+    box-shadow: 0 10px 0 rgb(10, 66, 73);
     transform: translateY(-5px);
 }
 
