@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #3e3ea0;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -15,54 +15,65 @@ body {
 }
 
 .card {
+    position: relative;
     background: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 255, 213, 0.836);
     padding: 20px;
-    width: 320px;
+    width: 400px;
     text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.card img {
-    width: 100px;
-    height: 100px;
+.card:hover {
+    box-shadow: 0 10px 0 rgba(0, 225, 255, 0.836);
+    transform: translateY(-5px);
+}
+
+.card img#avatar {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     margin-bottom: 15px;
 }
 
-.card h1 {
-    font-size: 24px;
+.card h3#konten {
+    font-size: 45px;
     margin-bottom: 10px;
     color: #333333;
 }
 
-.card p {
-    margin: 10px 0;
-    color: #555555;
-}
-
-.card .skills {
-    font-weight: bold;
-    color: #007bff;
-}
-
-.card .rate {
+.card p#rate {
     font-size: 18px;
     color: #28a745;
     margin-top: 10px;
 }
 
+/* sosial icon */
 .social-icons {
-    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
 }
 
-.social-icons a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #555555;
-    font-size: 20px;
+.social-icons i {
+    font-size: 50px;
+    color: #5555;
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
 }
 
-.social-icons a:hover {
-    color: #007bff;
+.social-icons #instagram:hover {
+    color: #e4405f; /* Warna merah muda untuk Instagram */
+}
+
+.social-icons #github:hover {
+    color: #333; /* Warna hitam untuk GitHub */
+}
+
+.social-icons #wa:hover {
+    color: #25d366; /* Warna hijau untuk WhatsApp */
 }
