@@ -1,16 +1,17 @@
-import { getJSON } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.1/api.js";
-import { renderHTML } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.1/element.js";
-import { getHash, onHashChange } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.1/url.js"
+import { getJSON } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.6/api.js";
+import { renderHTML } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.6/element.js";
+import { getHash, onHashChange } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.6/url.js"
 
-onHashChange(ada);
-function ada() {
-    console.log(getHash());
-    const hashpath = getHash();
-    if (hashpath === "data") {
-        console.log("ini sudah muncul datanya");
-        renderHTML("container", "data.html", renderDataDariJson);
-    }
-}
+// onHashChange(ada);
+// function ada() {
+//     console.log(getHash());
+//     const hashpath = getHash();
+//     if (hashpath === "data") {
+//         console.log("ini sudah muncul datanya");
+//         renderHTML("container", "data.html", renderDataDariJson);
+//     }
+// }
+renderHTML("container", "data.html", renderDataDariJson);
 
 function renderDataDariJson() {
     getJSON("https://t.if.co.id/json/rifa.json", responseFunction);
