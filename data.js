@@ -2,15 +2,16 @@ import { getJSON } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.6/api.js";
 import { renderHTML } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.6/element.js";
 import { getHash, onHashChange } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.6/url.js"
 
-onHashChange(ada);
-function ada() {
-    console.log(getHash());
-    const hashpath = getHash();
-    if (hashpath === "data") {
-        console.log("ini sudah muncul datanya");
-        renderHTML("container", "data.html", renderDataDariJson);
-    }
-}
+// onHashChange(ada);
+// function ada() {
+//     console.log(getHash());
+//     const hashpath = getHash();
+//     if (hashpath === "data") {
+//         console.log("ini sudah muncul datanya");
+//         renderHTML("container", "data.html", renderDataDariJson);
+//     }
+// }
+renderHTML("container", "data.html", renderDataDariJson);
 
 function renderDataDariJson() {
     getJSON("https://t.if.co.id/json/rifa.json", responseFunction);
@@ -62,7 +63,7 @@ function responseFunction(isi) {
         socialContainer.appendChild(linkElement);
     });
 
-    
+
 
     // Tambahkan elemen ke dalam card-item
     dataContainer.appendChild(avatar);
@@ -83,7 +84,7 @@ const gradients = [
 
 let currentGradientIndex = 0;
 
-setInterval(function() {
+setInterval(function () {
     document.body.style.background = gradients[currentGradientIndex];
     currentGradientIndex = (currentGradientIndex + 1) % gradients.length;
 }, 2000);
