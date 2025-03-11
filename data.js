@@ -43,6 +43,10 @@ function responseFunction(isi) {
     rate.id = "rate";
     rate.textContent = isi.data.Rate;
 
+    const contactTitle = document.createElement("h4");
+    contactTitle.id = "contact-title";
+    contactTitle.textContent = "CONTACT ME :";
+
     const socialContainer = document.createElement("div");
     socialContainer.classList.add("social-icons");
     socialContainer.id = "so";
@@ -62,7 +66,7 @@ function responseFunction(isi) {
         socialContainer.appendChild(linkElement);
     });
 
-    
+
 
     // Tambahkan elemen ke dalam card-item
     dataContainer.appendChild(avatar);
@@ -70,6 +74,7 @@ function responseFunction(isi) {
     dataContainer.appendChild(ug);
     dataContainer.appendChild(skill);
     dataContainer.appendChild(rate);
+    dataContainer.appendChild(contactTitle);
     dataContainer.appendChild(socialContainer);
 }
 
@@ -83,7 +88,7 @@ const gradients = [
 
 let currentGradientIndex = 0;
 
-setInterval(function() {
+setInterval(function () {
     document.body.style.background = gradients[currentGradientIndex];
     currentGradientIndex = (currentGradientIndex + 1) % gradients.length;
 }, 2000);

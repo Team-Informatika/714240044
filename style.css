@@ -50,6 +50,13 @@ body {
     margin-top: 10px;
 }
 
+#contact-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
 /* sosial icon */
 .social-icons {
     display: flex;
