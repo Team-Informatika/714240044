@@ -44,6 +44,13 @@ body {
     color: #333333;
 }
 
+.card p#skills {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #0699fc;
+}
 .card p#rate {
     font-size: 18px;
     color: #28a745;
@@ -84,12 +91,4 @@ body {
 
 .social-icons #wa:hover {
     color: #25d366; /* Warna hijau untuk WhatsApp */
-}
-
-#skills {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    color: #0699fc;
 }
